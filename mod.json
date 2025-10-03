@@ -1,0 +1,17 @@
+{
+	"geode": "4.9.0",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "itsflifteen8.end_task_button",
+	"name": "End Task Button",
+	"version": "v1.0.0",
+	"developer": "ItsFlifteen8",
+	"description": "Adds a \"End Task\" button to the main menu.",
+	"dependencies": {
+		"geode.node-ids": ">=v1.20.0"
+	}
+}
