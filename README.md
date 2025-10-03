@@ -1,17 +1,30 @@
-# EndTaskButton
-This is where she makes a mod.
+# End Task Button
+This my first mod for Geode.
 
 <img src="logo.png" width="150" alt="the mod's logo" />
 
-*Update logo.png to change your mod's icon (please)*
-
-## Getting started
-We recommend heading over to [the getting started section on our docs](https://docs.geode-sdk.org/getting-started/) for useful info on what to do next.
+## What is it?
+This is a mod for Geometry Dash, made possible with [Geode](https://geode-sdk.org) that adds a button to the main menu that ends the game's task (Not fully, but the closest I can do).
 
 ## Build instructions
-For more info, see [our docs](https://docs.geode-sdk.org/getting-started/create-mod#build)
+
+### **Required Tools:**
+* [Geode CLI](https://github.com/geode-sdk/cli/releases/latest) on **Windows**, **macOS**, and **Linux**
+* **MSVC** on **Windows**
+* **Clang** on **macOS**
+* **CMake** on **Windows**, **macOS**, and **Linux**
+
+Wayyyyyy more important info at https://docs.geode-sdk.org/getting-started/geode-cli and https://docs.geode-sdk.org/getting-started/create-mod#build, including Linux info.
+
+First of all, to build, you need the source code. You can get it easily with a command prompt with [Git](https://git-scm.org) in a directory of your choice:
 ```sh
-# Assuming you have the Geode CLI set up already
+git clone https://github.com/mintYY-ov/GD-EndTask-Button.git
+```
+This creates a folder called "GD-EndTask-Button".
+
+Open the folder, and in your command prompt, type:
+```sh
+cd GD-EndTask-Button
 geode build
 ```
 
