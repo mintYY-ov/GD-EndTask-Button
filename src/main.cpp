@@ -27,6 +27,6 @@ class $modify(MyMenuLayer, MenuLayer) {
 	}
 
 	void onMyButton(CCObject*) {
-		Geode::utils::game::exit(false);
+		geode::utils::game::exit(false);
 	}
 };
