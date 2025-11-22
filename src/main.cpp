@@ -1,5 +1,6 @@
 #include <Geode/Geode.hpp>
 #include <Geode/utils/general.hpp>
+#include <Geode/utils/terminate.hpp>
 
 using namespace geode::prelude;
 
@@ -10,23 +11,32 @@ class $modify(MyMenuLayer, MenuLayer) {
 			return false;
 		}
 
-		auto myButton = CCMenuItemSpriteExtra::create(
-			CCSprite::createWithSpriteFrameName("GJ-cancel-Download-Btn-001.png"),
+		auto endButton = CCMenuItemSpriteExtra::create(
+			CCSprite::createWithSpriteFrameName("GJ_cancelDownloadBtn_001.png"),
 			this,
-			menu_selector(MyMenuLayer::onMyButton)
+			menu_selector(MyMenuLayer::onendButton)
 		);
 
 		auto menu = this->getChildByID("top-menu");
-		menu->addChild(myButton);
+		menu->addChild(endButton);
 
-		myButton->setID("end-task"_spr);
+		endButton->setID("end-task"_spr);
 
 		menu->updateLayout();
 
 		return true;
 	}
 
-	void onMyButton(CCObject*) {
-		geode::utils::game::exit(false);
+	void onendButton(CCObject*) {
+		geode::createQuickPopup(
+			"Terminate Game",
+			"Do you want to <cr>terminate</c> the game? <cl>This will also remove any unsaved data, like a crash.</c>",
+			"Cancel", "Terminate",
+			[](auto, bool btn2) {
+				if (btn2) {
+					geode::utils::terminate()
+				}
+			}
+		);
 	}
 };
